@@ -116,9 +116,9 @@ sudo service resolvconf restart</pre>
 sudo apt-get install samba</pre>
         
         <h3>Adding a User</h3>
-        <p>Once it’s done installing we’ll make a user.</p>
+        <p>Once it's done installing we'll make a user.</p>
         <pre>smbpassed -a &lt;new_username&gt;</pre>
-        <p>The username you enter does not have to be the same as your username for ubuntu (samba manages it’s own list of users) however in my case they happened to be the same.</p>
+        <p>The username you enter does not have to be the same as your username for ubuntu (samba manages it's own list of users) however in my case they happened to be the same.</p>
         <pre>smbpassed -a adil</pre>
 
         <h3>Making a Shared Folder</h3>
@@ -128,12 +128,30 @@ sudo apt-get install samba</pre>
         <pre>sudo chown &lt;username&gt; /home/&lt;username&gt;/&lt;foldername&gt;</pre>
         <p>This will change you to the owner of the directory. Alternately, as per advice from a friend, I fixed the issue by entering:</p>
         <pre>sudo chmod 777 /home/&lt;username&gt;/&lt;foldername&gt;</pre>
-        <p>Now that we’ve made the folder we have to configure samba for it. To do this the smb.conf file will have to be edited so we can go ahead and open it up in our favorite text editor. I use sublime so I wrote:</p>
+        <p>Now that we've made the folder we have to configure samba for it. To do this the smb.conf file will have to be edited so we can go ahead and open it up in our favorite text editor. I use sublime so I wrote:</p>
         <pre>sudo subl /etc/samba/smb.conf</pre>
-        <p>If you aren’t familiar with text editors or you don’t want to <a href="#">install sublime</a> you can use the pre-installed nano editor.</p>
+        <p>If you aren't familiar with text editors or you don't want to <a href="#">install sublime</a> you can use the pre-installed nano editor.</p>
         <pre>sudo nano /etc/samba/smb.conf</pre>
-        <p>once it’s open navigate to the very bottom of the document and add:<sup><a href="#">[2]</a></sup></p>
-        
+        <p>once it's open navigate to the very bottom of the document and add:<sup><a href="#">[2]</a></sup></p>
+        <pre>[&lt;foldername&gt;]
+path = /home/&lt;user_name&gt;/&lt;foldername&gt;
+available = yes
+valid users = &lt;username&gt;
+read only = no
+browseable = yes
+public = yes
+writable = yes
+</pre>
+        <p>If you find yourself needing more specific configurations for the folder checkout the documentation. Otherwise you can now save and quit out of your editor. At this point you should restart samba with</p>
+        <pre>sudo service smbd restart</pre>
+        <p>Finally check that there are no errors in your smb.conf by entering</p>
+        <pre>testparm</pre>
+        <p>If you got to here without an error you did it! Your file server should be up and running.</p>
+
+        <h3>Connecting to your server from OSX</h3>
+        <p>Now all that's left to do is access the server from your other machine. If you go to Finder > Go > Connect to a server or with finder selected enter <kbd>command</kbd> + <kbd>K</kbd> a window will show up that looks like this:</p>
+        <img src="#" alt="Network Manager Screenshot"/>
+        <p>Enter the IP address of your file server and login with the account you made earlier and you should be good to go!</p>
       </div>
     </article>
     <article>
