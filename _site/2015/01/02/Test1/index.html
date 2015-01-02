@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="assets/styles/shared.css">
+<!--To Do: Standardize and rework typography formatting-->
+<div class="canvas">
+  <header class="page-header">
+  <h1>Adil Soubki</h1>
+  <p class="summary">Math Physics Programming Space</p>
+</header>
+  <section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elementum leo non felis porttitor vulputate. Nulla ipsum quam, auctor ut hendrerit quis, tincidunt eu metus. Quisque ipsum tellus, semper a tempus quis, interdum vel magna. Cras a nisl diam, in accumsan augue. Pellentesque varius nibh eu diam tempor rhoncus.</p>
+
+<h4 id="pellentesque-sollicitudin">Pellentesque sollicitudin</h4>
+
+<p>Erat pellentesque ornare gravida, ipsum est luctus neque, eget condimentum urna arcu sit amet felis. Duis nisl augue, scelerisque quis iaculis non, commodo a tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tincidunt porttitor nibh at semper. </p>
+
+  </section>
+  <footer class="page-footer">
+  <h2 class="contact-wrapper">
+    <a class="contact" href="http://codepen.io/AdilSoubki/"><span class="fa fa-codepen"></span></a>
+    <a class="contact" href="https://github.com/Soubkia"><span class="fa fa-github-alt"></span></a>
+    <a class="contact" href="https://twitter.com/AdilSoubki"><span class="fa fa-twitter"></span></a> |
+    <a class="contact"href="mailto:soubkia@gmail.com"><span class="fa fa-envelope-o"></span></a>
+    <a class="contact" href="blog.html"><span class="fa fa-rocket"></span></a>
+    <a class="contact" href="resume.html"><span class="fa fa-file-o"></span></a>
+  </h2>
+  <p class="summary">This site was made with the help of a <a href="#">codepen</a>. Credit for the design goes to the original author.</p>
+</footer>
+</div>
+
+<!--Jquery-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/scripts/waypoints.min.js"></script>
+<script>
+(function($) {
+  
+  var bottomOffset = 150;
+  
+  // Do our DOM lookups beforehand
+  var container = $("article");
+  
+  // Scrolling into top of article
+  container.waypoint({
+    handler: whenTopOfSection
+  });
+  
+  // Scrolling into bottom of article
+  container.waypoint({
+    offset: bottomSectionOffset,
+    handler: whenBottomOfSection
+  });
+  
+  function bottomSectionOffset() {
+    return -($(this).height() - bottomOffset);
+  }
+  
+  function whenTopOfSection(direction) {
+    $(this).toggleClass('sticky', direction != 'up')
+  }
+  
+  function whenBottomOfSection(direction) {
+    $(this).toggleClass('hide', direction != 'up')
+  }
+
+})(jQuery);
+</script>
