@@ -1,9 +1,10 @@
 name: ""
 description: ""
 
-url: "http://localhost:4000"
+url: "http://www.adilsoubki.com"
 
 paginate: 10
 
+encoding: utf-8
 permalink: pretty
 highlighter: pygments 
