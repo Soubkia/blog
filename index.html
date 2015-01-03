@@ -14,7 +14,8 @@ layout: default
         </div>
       </header>
       <div class="content">
-        {{ post.content }}
+        {{ post.excerpt }}
+        <a href="{{ post.url }}">View Post</a>
       </div>
     </article>
 {% endfor %}

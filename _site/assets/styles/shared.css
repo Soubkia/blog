@@ -153,6 +153,11 @@ article:only-of-type:after,
 article:only-of-type:before {
   display: none;
 }
+article:last-child,
+article:only-of-type {
+  margin: 0;
+}
+/*@media screen and (min-width: 40em) {*/
 @media screen and (min-device-width: 1024px) {
   .sticky .stick {
     position: fixed;
