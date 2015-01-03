@@ -25,20 +25,20 @@ a.contact:hover {
   color: #ffa07a;
 }
 p,
+ol,
+ul,
 blockquote {
   line-height: 1.6em;
 }
-p {
-  margin: 0 0 2em;
+p,
+ol,
+ul {
+  margin: 0 0 1em;
 }
 blockquote {
   border-left: 1px solid #ddd;
   margin: 0 0 1em;
   padding: 0 0 0 1.5em;
-}
-ol, ul {
-  margin: 0;
-  line-height: 1.6em;
 }
 .custom-counter {
     counter-reset: item;
@@ -91,7 +91,7 @@ h4 {
 }
 .page-header {
   padding: 2em 0 1em;
-  margin: 0 0 4em;
+  margin: 0 0 3em;
   text-align: center;
   border-bottom: 1px solid #eee;
 }
@@ -111,8 +111,8 @@ h4 {
   color: #888;
 }
 article {
-  margin: 0 0 6em;
-  padding: 0 0 6em;
+  margin: 0 0 4em;
+  padding: 0 0 4em;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   position: relative;
@@ -148,7 +148,9 @@ article:before {
   z-index: 2;
 }
 article:last-child:after,
-article:last-child:before {
+article:last-child:before,
+article:only-of-type:after,
+article:only-of-type:before {
   display: none;
 }
 @media screen and (min-device-width: 1024px) {
