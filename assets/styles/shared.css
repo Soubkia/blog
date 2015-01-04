@@ -199,6 +199,9 @@ article:only-of-type {
   .contact-wrapper {
     font-size: 3em;
   }
+  body {
+    font-size: 1em;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 960px) and (orientation: portrait) {
