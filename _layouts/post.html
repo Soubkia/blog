@@ -5,20 +5,22 @@
 </head>
 <div class="canvas">
   {% include header.html %}
-  <article>
-    <header>
-      <div class="stick">
-        <h2>{{ page.title }}</h2>
-        <p class="date">
-           
-          by <a href="{{site.url}}">Adil Soubki </a>on {{ page.date | date_to_long_string }}
-        </p>
+  <section>
+    <article>
+      <header>
+        <div class="stick">
+          <h2>{{ page.title }}</h2>
+          <p class="date">
+             
+            by <a href="{{site.url}}">Adil Soubki </a>on {{ page.date | date_to_long_string }}
+          </p>
+        </div>
+      </header>
+      <div class="content">
+        {{ content }}
       </div>
-    </header>
-    <section>
-      {{ content }}
-    </section>
-  </article>
+    </article>
+  </section>
   {% include footer.html %}
 </div>
 
