@@ -43,7 +43,7 @@ I was surprised to learn that you can just pick just about any IP Address you wa
 - 172.16.0.0 - 172.31.255.255
 - 192.168.0.0 - 192.168.255.255
 
-<a href="#">This</a> post from sudo-juice lends some advice on picking IP addresses.
+This <a href="{{ page.link1 }}">post from sudo-juice</a> lends some advice on picking IP addresses.
 
 <blockquote>"My personal preference is to use IP's between 192.168.0.100 - 192.168.0.200. Steer clear of using an IP at the beginning and end of any of the ranges as they are usually used for network administration devices."</blockquote>
 
