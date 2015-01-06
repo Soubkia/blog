@@ -10,7 +10,7 @@ link4: https://www.samba.org/samba/docs/using_samba/ch06.html
 
 ---
 
-I recently dusted off the computer I built in high school and decided to install Ubuntu on it and try to set it up as a simple home file server. In doing so I realized I both had no idea how to set up a server or even use linux. After I got it working I decided that I should document it before I forget and hey, maybe it will be useful to someone else.
+I recently dusted off the computer I built in high school and decided to install Ubuntu on it and try to set it up as a simple home file server. In doing so I realized I had no idea how to set up a server or even use linux. After I got it working I decided that I should document it before I forget and hey, maybe it will be useful to someone else.
 
 #### A Word of Warning
 
