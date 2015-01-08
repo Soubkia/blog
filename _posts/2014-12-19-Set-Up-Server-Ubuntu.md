@@ -65,7 +65,7 @@ The address that appears directly after "default via" is your network gateway.
 
 ####Netmask/Subnet
 
-I was told that the netmask for almost every simple residential router is 255.255.255.0<sup><a href="{{ page.link1 }}">[1]</a></sup> and for me that was the case. However, you should probably look it up because it really isn't too hard. To get your netmask go back to terminal and enter:
+I was told that the netmask for almost every simple residential router is 255.255.255.0<sup><a href="{{ page.link1 }}">[1]</a></sup> and for me that was the case. However, you should probably look it up because it really isn't too hard. To get your netmask go back to terminal and enter: 
 
 <pre>ifconfig -a</pre>
 
