@@ -8,7 +8,7 @@ link2: http://askubuntu.com/questions/172698/how-do-i-install-sublime-text-2-3
 link3: https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20(Command-line%20interface/Linux%20Terminal)%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!
 link4: https://www.samba.org/samba/docs/using_samba/ch06.html
 
----
+--- 
 
 I recently dusted off the computer I built in high school and decided to install Ubuntu on it and try to set it up as a simple home file server. In doing so I realized I had no idea how to set up a server or even use linux. After I got it working I decided that I should document it before I forget and hey, maybe it will be useful to someone else.
 
